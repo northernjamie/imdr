@@ -6,7 +6,9 @@
 #' @param postcodes This is the dataframe containing all data
 #' @param pcdcolumn This isd the name of the column that contains the postcode data
 #'
-#' imd_lookup()
+#' @import SPARQL
+#' @import reshape2
+#'
 imd_lookup <- function(postcodes,pcdcolumn) {
 
   # Set the variables for the sparql endpoint and the two halves of the SPARQL query
@@ -61,9 +63,9 @@ imd_lookup <- function(postcodes,pcdcolumn) {
 
   }
   query <- paste(sparql_part1,whole_values_statement,sparql_part2,sep="")
-  df <- SPARQL(sparql_endpoint,query)
+  df <- SPARQL::SPARQL(sparql_endpoint,query)
   results <- df$results
-  results_dcasted <- dcast(results, postcode + lsoa ~ domain, value.var = "rank")
+  results_dcasted <- reshape2::dcast(results, postcode + lsoa ~ domain, value.var = "rank")
   results_dcasted$postcode <- gsub('\\s+', '', results_dcasted$postcode)
   merged <- merge(x=postcodes, y = results_dcasted, by.x="strippedpcd", by.y = "postcode", all.x = TRUE)
 }

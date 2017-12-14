@@ -9,9 +9,7 @@ imd_lookup(postcodes, pcdcolumn)
 \arguments{
 \item{postcodes}{This is the dataframe containing all data}
 
-\item{pcdcolumn}{This isd the name of the column that contains the postcode data
-
-imd_lookup()}
+\item{pcdcolumn}{This isd the name of the column that contains the postcode data}
 }
 \description{
 Function for looking up a column of postcodes and returning information about the
