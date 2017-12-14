@@ -1,0 +1,14 @@
+Package: imdr
+Type: Package
+Title: Look Up Indices of Deprivation Data By Postcode
+Version: 0.1.0
+Author: Jamie Whyte (@northernjamie)
+Maintainer: Jamie Whyte <jamie@propolis.io>
+Description: Takes a dataframe with a column of postcodes, and returns the ranks of English Indices
+    of Deprivation, using a SPARQL query from OpenDataCommunities
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: reshape2,
+    SPARQL
+RoxygenNote: 6.0.1
