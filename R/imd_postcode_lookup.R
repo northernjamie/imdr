@@ -24,8 +24,6 @@
 #'
 imd_lookup <- function(postcodes,pcdcolumn) {
 
-  library(httr)
-  library(reshape2)
   # Set the variables for the encoded sparql endpoint and the two halves of the encoded SPARQL query
 
   sparql_endpoint <- "http://opendatacommunities.org/sparql?"
