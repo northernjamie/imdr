@@ -46,7 +46,7 @@ imd_lookup <- function(postcodes,pcdcolumn) {
 
   results <- content(results,"parsed")
 
-  results_dcasted <- reshape2::dcast(results, postcode + lsoa ~ domain, value.var = "rank", fun.aggregate = first, na.rm = TRUE)
+  results_dcasted <- reshape2::dcast(results, postcode + lsoa ~ domain, value.var = "rank", fun.aggregate = max, na.rm = TRUE)
   results_dcasted$postcode <- gsub('\\s+', '', results_dcasted$postcode)
   merged <- merge(x=postcodes, y = results_dcasted, by.x="strippedpcd", by.y = "postcode", all.x = TRUE)
   return(merged)
