@@ -36,7 +36,6 @@ imd_lookup <- function(postcodes,pcdcolumn) {
   for (row in 1:nrow(postcodes)) {
     cur_values_statement <- paste(whole_values_statement,"(",row,"%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fid%2Fgeography%2Fpostcode%2Fpostcodeunit%2F",as.character(postcodes$strippedpcd)[row],"%3E)%0A",sep="")
     whole_values_statement <- cur_values_statement
-
   }
   query <- paste(sparql_part1,whole_values_statement,sparql_part2,sep="")
 

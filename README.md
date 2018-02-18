@@ -7,7 +7,7 @@ To install to R, first ensure you have the devtools package installed, then type
 
   devtools::install_github("northernjamie/imdr")
 
-You can then use the command imd_lookup(name of dataframe,column with postcodes) to create a new dataframe with indices of deprivation infert
+You can then use the command imd_lookup(name of dataframe,column with postcodes) to create a new dataframe with indices of deprivation in
 
 Feedback very welcome, @northernjamie on twitter!
 
