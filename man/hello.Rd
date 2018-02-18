@@ -1,6 +1,6 @@
-\name{hello}
-\alias{hello}
-\title{Hello, World!}
+\name{imdr}
+\alias{imdr}
+\title{Lookup IMD Using Postcode}
 \usage{
 hello()
 }

@@ -2,16 +2,31 @@
 % Please edit documentation in R/imd_postcode_lookup.R
 \name{imd_lookup}
 \alias{imd_lookup}
-\title{Lookup IMD Using Postcode}
+\title{Gets English indices of deprivation ranks by postcode}
 \usage{
 imd_lookup(postcodes, pcdcolumn)
 }
 \arguments{
 \item{postcodes}{This is the dataframe containing all data}
 
-\item{pcdcolumn}{This isd the name of the column that contains the postcode data}
+\item{pcdcolumn}{This is the index of the column that contains the postcode data (1 being the 1st column in the daataframe)}
+}
+\value{
+returns a dataframe with the original data with extra columns containing deprivation ranks
 }
 \description{
+This package takes a dataframe containing a column of postcodes (and other information) and uses it to look up IMD ranks for that area
+}
+\details{
+Lookup IMD Using Postcode
+
 Function for looking up a column of postcodes and returning information about the
-indices of deprivation about that area
+indices of deprivation about that area.
+
+Uses the SPARQL endpoint at Open Data Communities - The Ministry of Housing, Communities and Local Government in the UK.
+Coverage - England only.
+}
+\examples{
+new_dataframe <- imd_lookup(dataToBeMatched,3) [3 is the index of the column with the postcode in]
+
 }

@@ -9,6 +9,5 @@ Description: Takes a dataframe with a column of postcodes, and returns the ranks
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: reshape2,
-    SPARQL
+Imports: reshape2, httr
 RoxygenNote: 6.0.1
